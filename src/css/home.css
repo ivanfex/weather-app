@@ -1,0 +1,24 @@
+.Home {
+	position: fixed;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat:no-repeat;
+	background-size:100%;
+	background-position:fill;
+	background-image: url(https://static.pexels.com/photos/50721/pencils-crayons-colourful-rainbow-50721.jpeg);
+	text-align: center;
+}
+
+.Instructions {
+	margin-top: 100px;
+	color: white;
+	font-size: 25px;
+}
+
+.Input {
+	position: relative;
+	text-align: center;
+	width: 25%;
+	margin: 0 auto;
+}
