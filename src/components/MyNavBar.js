@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button, Form, FormGroup, FormControl, Navbar, Nav, NavItem} from 'react-bootstrap';
 import WeatherFetcher from '../utils/WeatherFetcher';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
 class MyNavBar extends React.Component {
 	constructor(){
@@ -19,8 +20,9 @@ class MyNavBar extends React.Component {
 	}
 
 	handleClick(){
-		WeatherFetcher.fetchFiveDayWeather(this.state.value)
-		.then((data) => this.setState({ fiveDayWeather: data.data, loaded: true }));
+		const path = `/forecast/${this.state.value}`
+		this.setState({value: ''})
+		browserHistory.push(path)
 	}
 
 	componentDidUpdate(){
